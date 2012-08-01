@@ -20,9 +20,9 @@
 #include <SPI.h>
 
 /************ ETHERNET STUFF ************/
-byte mac[] = { 0x90, 0xA2, 0xDA, 0x0D, 0x66, 0x3A };
-byte ip[] = {  192, 168, 1, 250 };
-EthernetServer server(80);
+byte mac[] = { 0x90, 0xA2, 0xDA, 0x0D, 0x66, 0x3A }; // put in the MAC adress of your arduino
+byte ip[] = {  192, 168, 1, 250 }; //put in your local ip
+EthernetServer server(80); 
 
 /************ light stuff **************/
 boolean auth= false;
@@ -31,7 +31,7 @@ boolean states[]={1,1,1,0}; // list of the light/relay states
 boolean blinkstates[]={1,1,1,0};  // list of which lights/relays should be in the blink cycle
 int pins[]={5,6,7,8}; // list of the light/relay pins
 char* lights[]={"red","yellow","green","beacon"}; // list of the "light" lables
-char secret[] = "farty";
+char secret[] = "secret"; // input any password you want in between the quotatoin marks 
 int blinkc=1;
 int blinkmax=20000;
 
